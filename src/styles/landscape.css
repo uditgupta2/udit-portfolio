@@ -1,0 +1,172 @@
+/* A landscape built in layers so every part can respond to light and movement. */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 820px;
+  height: clamp(820px, 61.5vw, 1060px);
+  overflow: hidden;
+  background: var(--sky-top);
+}
+.mountain-scene {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.landscape {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.landscape path,
+.landscape stop,
+.landscape use {
+  transition:
+    fill 0.8s ease,
+    stop-color 0.8s ease;
+}
+.hero-copy {
+  padding-top: 55px;
+}
+.hero-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.18em;
+}
+.hero-intro span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+}
+.hero-copy h1 {
+  font-size: clamp(63px, 6.5vw, 99px);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+  margin-top: 27px;
+}
+.hero-copy h1 em {
+  color: var(--button);
+}
+.hero-description {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-top: 23px;
+}
+.hero-actions {
+  margin-top: 27px;
+}
+.hero-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 23px;
+  font-size: 9px;
+  color: var(--muted);
+}
+.hero-specialties i {
+  width: 3px;
+  height: 3px;
+  background: var(--muted);
+  border-radius: 50%;
+}
+.hero-bottom {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #e2e8db;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  z-index: 2;
+}
+.scroll-cue {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.scroll-cue svg {
+  animation: scroll-hint 2s ease-in-out infinite;
+}
+.night-celestial {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.day-celestial,
+.night-celestial {
+  transition:
+    opacity 0.8s,
+    transform 0.8s;
+}
+:root[data-theme='dark'] .day-celestial {
+  opacity: 0;
+  transform: translateY(60px);
+}
+:root[data-theme='dark'] .night-celestial {
+  opacity: 1;
+  transform: translateY(0);
+}
+.star {
+  animation: twinkle 5s ease-in-out infinite alternate;
+}
+.water-ripples {
+  animation: river-flow 5s ease-in-out infinite alternate;
+}
+.mountain-scene[data-visible='false'] * {
+  animation-play-state: paused !important;
+}
+@keyframes twinkle {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@keyframes river-flow {
+  from {
+    transform: translateX(-6px) translateY(-2px);
+  }
+  to {
+    transform: translateX(7px) translateY(4px);
+  }
+}
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+.intro-strip {
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.intro-strip .shell {
+  max-width: 970px;
+}
+.intro-strip span {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.intro-strip svg {
+  color: var(--ink);
+  stroke-width: 1.4;
+}

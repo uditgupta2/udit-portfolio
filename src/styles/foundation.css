@@ -1,0 +1,233 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Manrope Variable', sans-serif;
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-footer-muted: #b6c9bd;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+  --paper: #f8f7f2;
+  --surface: #f0f1e9;
+  --ink: #243d32;
+  --muted: #59665d;
+  --accent: #a35431;
+  --border: #dcded4;
+  --button: #294f3b;
+  --button-text: #f8f7f0;
+  --header: #f8f7f2ee;
+  --sky-top: #f8f7f2;
+  --sky-bottom: #d6e0d5;
+  --sun: #e6bf71;
+  --contour: #aab9a7;
+  --cloud: #a9bbb0;
+  --ridge-far: #bdc9c1;
+  --ridge-main: #8fa69a;
+  --ridge-near: #6e8b77;
+  --mountain-facet: #5f8274;
+  --snow: #f1f4ea;
+  --snow-shadow: #d9e3d9;
+  --valley: #56765f;
+  --river: #98b6a5;
+  --river-light: #dce3cb;
+  --water-glint: #f2f0d8;
+  --forest-back: #476c55;
+  --forest-front: #284c3b;
+  --foreground: #355b43;
+  --trail-color: #b4b996;
+  --hiker: #1b3529;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #101e24;
+  --surface: #15272c;
+  --ink: #e3e8df;
+  --muted: #a4b4ae;
+  --accent: #e0ac7c;
+  --border: #2e4043;
+  --button: #c3d3b6;
+  --button-text: #172b24;
+  --header: #101e24ef;
+  --sky-top: #101e24;
+  --sky-bottom: #293f52;
+  --sun: #e7e2c8;
+  --contour: #49616b;
+  --cloud: #82959e;
+  --ridge-far: #385365;
+  --ridge-main: #416078;
+  --ridge-near: #284956;
+  --mountain-facet: #1f3b54;
+  --snow: #d3e0e4;
+  --snow-shadow: #99b2c3;
+  --valley: #1d3a43;
+  --river: #527a87;
+  --river-light: #9cb5be;
+  --water-glint: #d9e7e8;
+  --forest-back: #1b363e;
+  --forest-front: #0b252d;
+  --foreground: #132f38;
+  --trail-color: #708e92;
+  --hiker: #d5ded2;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button,
+input {
+  font: inherit;
+}
+::selection {
+  background: #c4d5bb;
+  color: #1c3a2a;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+main:focus {
+  outline: none;
+}
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 450;
+  letter-spacing: -0.045em;
+}
+h2 {
+  font-size: clamp(2.4rem, 3.7vw, 3.65rem);
+  line-height: 1.13;
+}
+em {
+  font-weight: 400;
+}
+section[id],
+footer[id] {
+  scroll-margin-top: 105px;
+}
+.shell {
+  width: min(1240px, calc(100% - 112px));
+  margin-inline: auto;
+}
+.section-space {
+  padding-block: 108px;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  line-height: 1.6;
+}
+.section-number {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+}
+.section-heading h2 {
+  margin-top: 23px;
+  max-width: 640px;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 650;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.text-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 23px;
+  min-height: 49px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 650;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+.button:hover {
+  transform: translateY(-3px);
+}
+.button-primary {
+  color: var(--button-text);
+  background: var(--button);
+  border: 1px solid var(--button);
+}
+.button-secondary {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--paper) 70%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 23%, transparent);
+}
+.button svg {
+  flex-shrink: 0;
+}
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 15px;
+  z-index: 100;
+  padding: 15px;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+}
+.skip-link:focus {
+  top: 10px;
+}

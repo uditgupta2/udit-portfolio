@@ -1,0 +1,367 @@
+/* Small interface studies communicate each product without posing as screenshots. */
+.product-preview {
+  height: 285px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  color: #33443e;
+  isolation: isolate;
+}
+.preview-casefox {
+  background: #e6d6c6;
+  --mock-accent: #986a48;
+  --mock-tint: #ede6db;
+}
+.preview-mattersuite {
+  background: #d8d8e6;
+  --mock-accent: #74659d;
+  --mock-tint: #edebf4;
+}
+.preview-roostercal {
+  background: #d4e0dc;
+  --mock-accent: #376c5d;
+  --mock-tint: #e3eeea;
+}
+.preview-orbit {
+  position: absolute;
+  border: 1px solid #ffffff66;
+  border-radius: 50%;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+}
+.orbit-one {
+  top: -170px;
+  right: -130px;
+}
+.orbit-two {
+  bottom: -190px;
+  left: -90px;
+  width: 350px;
+  height: 350px;
+}
+.product-window {
+  width: 83%;
+  max-width: 320px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 15px 30px #26382e18;
+  transform: rotate(-3deg) translate(-3px, -5px);
+  overflow: hidden;
+  border: 1px solid #ffffffab;
+  transition: transform 0.4s;
+}
+.preview-mattersuite .product-window {
+  transform: rotate(3deg) translate(-3px, -12px);
+}
+.preview-roostercal .product-window {
+  transform: rotate(-3deg) translate(0, -6px);
+}
+.project-art-link:hover .product-window {
+  transform: rotate(0deg) translateY(-10px);
+}
+.window-bar {
+  height: 30px;
+  background: #fcfcfa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 10px;
+  border-bottom: 1px solid #eceee8;
+}
+.window-bar > span {
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--mock-accent);
+}
+.window-bar > span b {
+  font-size: 5px;
+  margin-left: 1px;
+  vertical-align: super;
+}
+.window-dots {
+  display: flex;
+  gap: 3px;
+}
+.window-dots i {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background: #c2c6be;
+}
+.window-avatar {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--mock-tint);
+  font-size: 6px;
+}
+.window-content {
+  display: flex;
+  min-height: 176px;
+}
+.window-sidebar {
+  width: 29px;
+  flex-shrink: 0;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 0;
+  color: #8e9690;
+}
+.window-sidebar svg {
+  width: 10px;
+  height: 10px;
+}
+.window-sidebar svg:first-child {
+  color: var(--mock-accent);
+}
+.window-main {
+  flex: 1;
+  padding: 15px 12px;
+  min-width: 0;
+}
+.window-main strong {
+  font-size: 8px;
+}
+.mock-button {
+  padding: 4px;
+  background: var(--mock-accent);
+  color: white;
+  border-radius: 2px;
+  font-size: 5px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.mock-metrics {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.mock-metrics > div {
+  width: 50%;
+  border: 1px solid #e8eae5;
+  padding: 6px;
+  border-radius: 3px;
+}
+.mock-metrics span {
+  display: block;
+  font-size: 5px;
+  color: #5b675e;
+}
+.mock-metrics strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.mock-metrics small {
+  font-size: 6px;
+  color: #5b675e;
+}
+.mock-chart {
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  height: 63px;
+  border-bottom: 1px solid #e2e7df;
+  padding: 7px 3px 0;
+  margin-top: 3px;
+}
+.mock-chart i {
+  flex: 1;
+  background: var(--mock-accent);
+  opacity: 0.45;
+  border-radius: 2px 2px 0 0;
+}
+.mock-chart i:nth-child(3n) {
+  opacity: 0.9;
+}
+.mock-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 6px;
+  margin-top: 9px;
+}
+.mock-invoice {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-block: 5px;
+  font-size: 5px;
+  border-bottom: 1px solid #eee;
+}
+.mock-invoice i {
+  font-style: normal;
+  color: #466849;
+  margin-left: auto;
+}
+.floating-note {
+  position: absolute;
+  box-shadow: 0 8px 25px #26382e17;
+  background: #fffffff5;
+  border: 1px solid #ffffff80;
+  border-radius: 6px;
+}
+.billing-note,
+.booking-note {
+  right: 13px;
+  bottom: 25px;
+  padding: 10px 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  transform: rotate(2deg);
+}
+.booking-check {
+  background: var(--mock-tint);
+  color: var(--mock-accent);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.floating-note strong {
+  font-size: 8px;
+}
+.floating-note p {
+  font-size: 6px;
+  color: #5b675e;
+  margin-top: 3px;
+}
+.document-toolbar {
+  display: flex;
+  gap: 12px;
+  font-size: 6px;
+  margin: 12px -12px 0;
+  padding: 6px 12px;
+  background: #f7f7f9;
+  border-block: 1px solid #eee;
+}
+.document-paper {
+  background: white;
+  margin: 12px 8px 0;
+  padding: 13px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 5px #00000005;
+}
+.document-paper p {
+  font-family: Georgia, serif;
+  font-size: 11px;
+}
+.document-paper > span {
+  font-size: 4px;
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.document-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+.document-lines i {
+  height: 2px;
+  background: #e1e3e6;
+  width: 100%;
+}
+.document-lines i:last-child {
+  width: 72%;
+}
+.ai-note {
+  bottom: 21px;
+  right: 12px;
+  width: 200px;
+  padding: 12px;
+  transform: rotate(-2deg);
+}
+.ai-note > span {
+  font-size: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--mock-accent);
+}
+.ai-note > p {
+  font-size: 9px;
+  color: #33443e;
+  font-weight: 650;
+  margin-top: 7px;
+}
+.note-lines {
+  margin-block: 8px;
+}
+.note-lines i {
+  display: block;
+  width: 90%;
+  height: 3px;
+  background: #edeaf3;
+  margin-top: 4px;
+}
+.note-lines i:last-child {
+  width: 68%;
+}
+.ai-note .ai-note-status {
+  color: #466849;
+}
+.calendar-heading {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 6px;
+  margin-top: 15px;
+}
+.calendar-heading svg:last-child {
+  margin-left: auto;
+}
+.mock-calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 12px;
+}
+.mock-calendar > div {
+  border-right: 1px solid #ebeee9;
+  min-width: 0;
+}
+.mock-calendar > div > span {
+  display: block;
+  font-size: 4px;
+  text-align: center;
+}
+.mock-calendar b {
+  display: block;
+  text-align: center;
+  font-size: 9px;
+  margin-top: 3px;
+  font-weight: 500;
+}
+.mock-calendar i {
+  display: flex;
+  flex-direction: column;
+  height: 31px;
+  margin-top: 7px;
+  border-top: 1px solid #ebeee9;
+  font-style: normal;
+  padding: 4px 2px;
+}
+.mock-calendar .has-event {
+  background: var(--mock-tint);
+  border-left: 2px solid var(--mock-accent);
+  border-radius: 2px;
+  margin-inline: 1px;
+}
+.mock-calendar small {
+  font-size: 4px;
+  line-height: 1.8;
+}

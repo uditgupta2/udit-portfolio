@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@import './styles/foundation.css';
+@import './styles/navigation.css';
+@import './styles/landscape.css';
+@import './styles/sections.css';
+@import './styles/product-preview.css';
+@import './styles/experience.css';
+@import './styles/footer.css';
+@import './styles/project-page.css';
+@import './styles/responsive.css';

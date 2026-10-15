@@ -1,0 +1,184 @@
+/* Experience and skills */
+.employer-card {
+  margin-top: 35px;
+  border-left: 2px solid var(--accent);
+  padding-left: 22px;
+}
+.employer-card > .eyebrow {
+  font-size: 9px;
+  color: var(--accent);
+}
+.employer-card h3 {
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: 650;
+}
+.employer-card > p {
+  font-size: 12px;
+  margin-top: 6px;
+  color: var(--muted);
+}
+.journey-list {
+  position: relative;
+  padding-left: 58px;
+}
+.journey-track {
+  width: 1px;
+  position: absolute;
+  top: 10px;
+  bottom: 18px;
+  left: 15px;
+  background: var(--border);
+}
+.journey-progress {
+  height: 100%;
+  background: var(--accent);
+}
+.journey-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+.journey-item:last-child {
+  margin-bottom: 0;
+}
+.journey-point {
+  position: absolute;
+  left: -58px;
+  top: -2px;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-size: 8px;
+}
+.journey-item h3 {
+  font-size: 15px;
+  font-weight: 650;
+}
+.journey-item p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.workflow-note {
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 24px 28px;
+}
+.workflow-note > svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.workflow-note h3 {
+  font-size: 13px;
+  font-weight: 650;
+}
+.workflow-note p {
+  margin-top: 6px;
+  max-width: 720px;
+  font-size: 11px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.workflow-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.skills-section {
+  background: var(--surface);
+  border-block: 1px solid var(--border);
+}
+.skill-group {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 50px;
+  padding-block: 29px;
+  border-top: 1px solid var(--border);
+}
+.skill-group h3 {
+  font-size: 14px;
+  font-weight: 650;
+  display: inline;
+}
+.skill-index {
+  color: var(--accent);
+  font-size: 9px;
+  margin-right: 15px;
+}
+.skill-group p {
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 9px;
+  padding-left: 34px;
+}
+.skill-group .tag {
+  background: var(--paper);
+  font-size: 11px;
+  padding: 8px 13px;
+}
+.field-journal {
+  position: relative;
+  height: 390px;
+}
+.journal-card {
+  background: var(--paper);
+  padding: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px #122e2410;
+  position: absolute;
+  width: 70%;
+  transition: transform 0.3s;
+}
+.journal-card .field-sketch {
+  width: 100%;
+}
+.journal-trail {
+  left: 0;
+  top: 0;
+  transform: rotate(-7deg);
+  z-index: 1;
+}
+.journal-camera {
+  right: -2px;
+  top: 140px;
+  transform: rotate(8deg);
+  z-index: 2;
+}
+.journal-card:hover {
+  transform: rotate(0deg);
+  z-index: 3;
+}
+.journal-card figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+  padding: 13px 4px 3px;
+}
+.journal-note {
+  position: absolute;
+  bottom: -7px;
+  left: 2px;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 15px;
+  transform: rotate(-7deg);
+}
+.journal-note svg {
+  display: inline;
+  transform: rotate(-25deg);
+  margin-left: 8px;
+}
